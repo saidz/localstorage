@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage</title>
+    <script src="../src/localstorage.js"></script>
+    <script>
+    var ls = M.localStorage;
+    console.log(ls.isSupport());
+    ls.set('abc',{a:'abcef',b:'b',c:'(function(){alert(2)}())'});
+    ls.set('a',{a:'abcef',b:'b'});
+    // ls.remove('abc');
+    var a = ls.get('abc');
+    ls.each(function(name,value){
+        console.log(name,value);
+        if(name==='abc'){
+            eval(value.c);
+        }
+    });
+    console.log(a);
+    ls.clear();
+    </script>
+</head>
+<body>
+    <div class="console" id="console">
+        
+    </div>
+</body>
+</html>
