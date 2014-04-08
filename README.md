@@ -2,7 +2,12 @@
 A simple wrap for `window.localStorage` and ie userData.
 
 ### TODO
-add support ie6、7 userdata
+
+<!--add support ie6、7 userdata-->
+
+add test case
+
+add bower support
 
 ### LICENSE
 The MIT License (MIT)

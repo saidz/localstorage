@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LocalStorage Test</title>
+	<link rel="stylesheet" href="lib/bower_components/mocha/mocha.css">
+	<script src="lib/bower_components/mocha/mocha.js"></script>
+	<script src="lib/bower_components/chai/chai.js"></script>
+	<script src="lib/bower_components/sinon/lib/sinon.js"></script>
+	<script src="lib/bower_components/should/should.js"></script>
+	<script src="lib/bower_components/sinon-chai/lib/sinon-chai.js"></script>
+	<script>
+		mocha.setup('bdd');
+		should = chai.should();
+	</script>
+	<script src="../src/json2.js"></script>
+	<script src="../src/localstorage.js"></script>
+	<script src="test.js"></script>
+	<script>
+		mocha.checkLeaks();
+		onload = function(){
+			mocha.run()
+		};
+	</script>
+</head>
+<body>
+	<div id="mocha"></div>	
+</body>
+</html>
