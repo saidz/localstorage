@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>localStorage</title>
-    <script src="../src/localstorage.js"></script>
+    <script src="src/json2.js"></script>
+    <script src="src/localstorage.js"></script>
     <script>
-    console.log(ls.isSupport());
+    alert(1);
+    var ls = S.localStorage;
+    alert(typeof ls.set);
     ls.set('abc',{a:'abcef',b:'b',c:'(function(){alert(2)}())'});
-    ls.set('a',{a:'abcef',b:'b'});
+    alert(1);
+   ls.set('a',{a:'abcef',b:'b'});
     // ls.remove('abc');
     var a = ls.get('abc');
     ls.each(function(name,value){
